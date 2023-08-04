@@ -1,1 +1,4 @@
-
+java -jar ~/Downloads/Trimmomatic/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 5 /
+SRR15395851_1.fastq SRR15395851_2.fastq SRR15395851_1.paired.fastq.gz /
+SRR15395851_1.unpaired.fastq.gzSRR15395851_2.paired.fastq.gz SRR15395851_2.unpaired.fastq.gz /
+ILLUMINACLIP:/home/k2so/Downloads/Trimmomatic/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True SLIDINGWINDOW:4:20 LEADING:3 TRAILING:3 MINLEN:36
