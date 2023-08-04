@@ -1,7 +1,0 @@
-time python3 cr_enrichment_actual.py\
- -a CHM13_kmer_counts.jf\
- -G Illumina_Genomic/SRR1997411_kmer_counts.jf\
- -g Illumina_Genomic/SRR1997411_1.paired.fastq \
- -C Illumina_CutRun/CHM13_CutRun_counts.tab\
- -c Illumina_CutRun/SRR15395851_1.paired.fastq\
- -K new_CHM13Kmer_enrichment.tab
