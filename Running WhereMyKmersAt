@@ -1,0 +1,1 @@
+python3 ~/Downloads/WhereMyKmersAt.py ../../CHM13_chrX.fasta testCHM13_newEnrichedKmers.txt newCHM13Kmer_enrichment.wig
