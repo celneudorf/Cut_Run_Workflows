@@ -1,8 +1,8 @@
-time python3 cr_enrichment_actual.py\
+python3 cr_enrichment_actual.py\
  -a CHM13_kmer_counts.jf\                           #Kmer counts from reference genome (.jf input) 
  -G Illumina_Genomic/SRR1997411_kmer_counts.jf\     #Kmer counts for Illumina_Genomic data (.jf input)
- -g Illumina_Genomic/SRR1997411_1.paired.fastq \    #Trimmed Illumina_Genomic R1 
- -C Illumina_CutRun/CHM13_CutRun_counts.tab\        #Kmer counts from Trimmed illumina Cut and Run Data 
+ -g Illumina_Genomic/SRR1997411_1.paired.fastq \    #Trimmed Illumina_Genomic R1 (paired.fastq input) 
+ -C Illumina_CutRun/CHM13_CutRun_counts.tab\        #Kmer counts from jellyfish dump trimmed illumina Cut and Run Data 
  -K new_CHM13Kmer_enrichment.tab                    # .tab file of enriched kmers
 
-time python3 
+
