@@ -1,0 +1,1 @@
+python3 ~/Downloads/calculate_average_enrichment.py actual_HG002_enrichment.tab > actual_HG002_enrichment.txt 
