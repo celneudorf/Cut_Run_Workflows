@@ -1,4 +1,4 @@
 gzip -d SRR15395851_1.paired.fastq.gz #jellyfish takes unzipped files
 gzip -d SRR15395851_2.paired.fastq.gz 
 jellyfish count -m 25 -s 10G -t 5 -F 2 -C -o CHM13_CutRun_kmer_counts.jf SRR15395851_1.paired.fastq SRR15395851_2.paired.fastq #countskmers and outputs .jf file  
-jellyfish dump -c -t -o CHM13_CutRun_counts.tab CHM13_CutRun_kmer_counts.jf 
+jellyfish dump -c -t -o CHM13_CutRun_counts.tab CHM13_CutRun_kmer_counts.jf #converts .jf into a more readable .tab file
