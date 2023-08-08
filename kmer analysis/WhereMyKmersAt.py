@@ -1,4 +1,3 @@
-
 import mappy
 import sys
 import numpy
@@ -29,3 +28,29 @@ for name,seq,q in mappy.fastx_read(sys.argv[1]):
             GenomekmerSet.add(kmer)
             if kmer in kmerSet:
                 posDict[name][index][0]+=1
+        out=open('kmers.fasta','w')
+        for kmer in GenomekmerSet:
+            out.write(f'>1\n{kmer}\n')
+        out.close()
+        os.system(f"jellyfish query {ActualGenomeKmers} -s kmers.fasta > query_output.tab") #for a million kmers,
+        print('finished jellyfish')
+        for line in open("query_output.tab"):
+            GenomeLine=line.strip().split(' ')
+            count=int(GenomeLine[1])
+            if count==1:
+                posDict[name][index][1]+=1
+        if posDict[name][index][1]>0:
+            print(posDict[name][index][0],posDict[name][index][1],posDict[name][index][0]/posDict[name][index][1])
+            
+counter=0
+out=open(sys.argv[3],'w')
+out.write('track type=wiggle_0\n')
+for name in posDict:
+    out.write(f'fixedStep chrom={name} start=1 step={stepsize} span={stepsize}\n')
+    for index in posDict[name]:
+        counter+=1
+        if posDict[name][index][1]>0:
+            out.write(str(posDict[name][index][0]/posDict[name][index][1])+'\n')
+        else:
+            out.write('0\n')
+out.close()
