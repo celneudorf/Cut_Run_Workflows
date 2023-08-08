@@ -18,7 +18,7 @@ for name,seq,q in mappy.fastx_read(sys.argv[1]):
     if name not in posDict:
         posDict[name]={}
     print(name)
-    for index in  range(0,len(seq),stepsize):
+    for index in range(0,len(seq),stepsize):
         print(name,index)
         GenomekmerSet=set()
         posDict[name][index]=[0,0]
@@ -32,7 +32,8 @@ for name,seq,q in mappy.fastx_read(sys.argv[1]):
         for kmer in GenomekmerSet:
             out.write(f'>1\n{kmer}\n')
         out.close()
-        os.system(f"jellyfish query {ActualGenomeKmers} -s kmers.fasta > query_output.tab") #for a million kmers,
+        
+        os.system(f"jellyfish query {ActualGenomeKmers} -s kmers.fasta > query_output.tab") 
         print('finished jellyfish')
         for line in open("query_output.tab"):
             GenomeLine=line.strip().split(' ')
