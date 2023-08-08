@@ -1,0 +1,6 @@
+sh 20230731_bwa_HG002cr_igg.sh \
+HG002_genomic_20230801 \
+../../Illumina_igg/ADGCCR08_G_S15_L002_R1_001.fastq.gz \
+../../Illumina_igg/ADGCCR08_G_S15_L002_R1_001.fastq.gz \
+../refs/CHM13_autosome_HG002_X_new_20230726 \
+./20230731_HG002_igg.bw
