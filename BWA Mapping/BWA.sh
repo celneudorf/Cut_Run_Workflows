@@ -1,7 +1,9 @@
 set -eux #if something fails stop running script
 sample_name=$1
-ref_file=$2 #this is the path to the ref file you want to use
-output_bw_file=$3 #year_month_date_sample_controlorcutrun
+r1_fastq=$2
+r2_fastq=$3
+ref_file=$4
+output_bw_file=$5 #year_month_date_sample_controlorcutrun
 
 java -jar ~/Downloads/Trimmomatic/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 10 \
    $r1_fastq \
