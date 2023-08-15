@@ -6,7 +6,7 @@ import os
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--actualgenomeKmers', '-a', type=str, action='store', help='actual genome kmer count as .jf file')
+parser.add_argument('--actualgenomeKmers', '-a', type=str, action='store', help='actual genome kmer counts from reference genome as .jf file')
 parser.add_argument('--genomeFastq', '-g', type=str, action='store', help='genome Fastq')
 parser.add_argument('--cutRunFastq', '-c', type=str, action='store', help='cutrun Fastq')
 parser.add_argument('--GenomeKmers', '-G', type=str, action='store', help='genome kmers (as jf file)')
