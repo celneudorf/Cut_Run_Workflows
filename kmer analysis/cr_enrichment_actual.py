@@ -103,7 +103,7 @@ for line in open(CutRunKmers): #for line in cutrun kmers fasta file
             controlCount=int(controlLine[1])
             controlkmer=controlLine[0]
 
-#calculating enrichment 
+#calculating enrichment by (cut and run kmer/reads)/(cut and run kmers found in illumina genomic/reads)
             ## only calculate if we have a non-zero controlCount
             if controlCount != 0:
                 enrichment= (cutrunCount[controlkmer]/lineCounter2)/(controlCount/lineCounter1)
